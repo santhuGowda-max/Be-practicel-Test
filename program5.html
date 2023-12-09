@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santhosh s</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/media/media.css">
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=poppins&display=swap');
+
+
+* {
+    font-family: 'poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    line-height: 1.5;
+   
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* header */
+
+header{
+    width: 100;
+    background-color:#222 ;
+    line-height: 60px;
+    color: white;
+
+}
+
+header nav{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .menu-btn{
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1877f2;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+
+}
+ nav .menu-btn span{
+    height: 5px;
+    width: 100%;
+    background-color: #fff;
+    margin: 3px;
+
+}
+
+nav ul li{
+   list-style: none;
+   display: inline-flex;
+   padding: 0px 12px ;
+   transition: all 0.3s ease-in;
+
+}
+nav ul li a,
+nav .logo a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+}
+nav.logo a{
+    font-size: 1.2em;
+}
+nav ul li:hover{
+    background-color:orange;
+    
+}
+
+/* section */
+
+#hero{
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden ;
+}
+
+/* side bar social links */
+
+#hero aside{
+    position: fixed;
+    right: 0px;
+    top:20%
+
+}
+
+aside .sticky-menu li{
+    list-style: none;
+    padding:10px 20px ;
+    margin-top: 3px;
+    cursor: pointer;
+    transform: translate(100px);
+    transition: 0.4s ease-in-out;
+}
+
+aside .sticky-menu li:hover{
+    transform: translate(0);
+}
+
+.sticky-menu li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.sticky-menu li:nth-child(1){background-color: #1877f2;}
+.sticky-menu li:nth-child(2){background-color:#222 ;}
+.sticky-menu li:nth-child(3){background-color: #cd201f}
+.sticky-menu li:nth-child(4){background-color: #db3236}
+.sticky-menu li:nth-child(5){background-color: #4078c0}
+
+
+/* row */
+ .row{
+    width: 100%;
+    width: 100%;
+ }
+
+ #home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(./css/img/5652012.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+   
+ }
+
+ #home h1,#home h2{
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+ }
+
+ /* About Section */
+
+ #about{ 
+    display: flex;
+   height: 100vh;
+   
+   
+}
+
+#about .col{
+    width: 100%;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+#about .col h1{
+    font-size: 2.5rem;
+}
+#about .col .content{
+    text-align: justify;
+    /* word-break:break-all */
+}
+
+#about .content p{
+    text-indent: 100px;
+    margin-top: 20px;
+}
+#about .about-cord{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#about .about-cord .image{
+    height: 200px;
+    width: 200px;
+}
+
+#about .about-cord .image img{
+    max-width: 100%;
+    border-radius: 10%;
+    border: 3px solid #fff;
+    outline: 3px solid #4078c0;
+}
+
+#about  ul li{
+    list-style: none;
+    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#about ul li strong{
+    color: #419197;
+    font-weight: 800;
+}
+
+
+#about .tech-cord{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#about ul li span{
+    color: #419197;
+}
+
+#about .tech-cord a{
+    text-decoration: none;
+    background-color: #12486b;
+    color: #fff;
+    padding: 12px 14px;
+    width: 150px;
+}
+/* nav #menu{
+    display: none;
+} */
+
+nav{
+    position: relative;
+}
+
+footer{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.container{
+   background-color: black;
+   color: white;
+}
+   </style>
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <div class="logo">
+                <a href="#">Portfolio</a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <aside>
+            <ul class="sticky-menu">
+                <li><a href="#">Fecebook <i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#">Twitter <i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#">YouTub <i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="">Google <i class="fa-brands fa-google"></i></a></li>
+                <li><a href="">GitHub<i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </aside>
+        <div class="container">
+            
+            <div class="row" id="home">
+                <div class="col">
+                    <h1>Santhosh s</h1>
+                    <h2>Java FullStack Developer</h2>
+                </div>
+               </div>
+                <div class="row" id="about">
+                    <div class="col">
+                        <h1>About me</h1>
+                        <div class="content">
+                            <p>
+                                Technically as a Fresher with developing and delivering software offering strong expertise in multiple programming language, include Core/Advance java,javaScript ,HTML and MySql.
+                                Seeking to Secure a Challenging position as a FullStack Developer
+                           </p> 
+                           
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="about-cord">
+                            <div class="image">
+                                <img src="./css/img/santhu.jpg" alt="User Image">
+                            </div>
+                            <div class="info">
+                                    <ul>
+                                        <li>
+                                            <strong>Name</strong>
+                                            <span>Santhosh s</span>
+                                        </li>
+
+                                        <li>
+                                            <strong>Email</strong>
+                                            <span>Santhoshupl2001@gmail.com</span>
+                                        </li>
+                                        <li>
+                                            <strong>Profile</strong>
+                                            <span>FullStack Developer</span>
+                                        </li>
+                                        <li>
+                                            <strong>Phone</strong>
+                                            <span>91+ 8431580513</span>
+                                        </li>
+                                       
+                                    </ul>
+                            </div>
+                        </div>
+
+                            <div class="tech-cord">
+                                <ul>
+                                    <li>
+                                        <strong>FrontEnd technology</strong>
+                                        <span>Html, Css , Js , BootStarp , React</span>
+
+                                    </li>
+                                    <li> 
+                                        <strong>BackEnd</strong>
+                                        <span>Java ,SpringBoot</span>
+                                       
+                                    </li>
+                                    <li>
+                                        <strong>Database</strong>
+                                        <span>Mysql , Sql</span>
+
+                                    </li>
+                                    <li>
+                                        <strong>Version Control</strong>
+                                        <span>Git</span>
+                                    </li>
+                                    <li>
+                                        <strong>Code Editors</strong>
+                                        <span>Vs Code, Eclipse</span>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <p>Click below link to download the pdf copy of resume</p>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://drive.google.com/file/d/1iAKFllIjOvDiR3IOUUKrbEvpkHrfHSz8/view?usp=sharing">Download Resume</a>
+                                    </li>
+                                </ul>
+                            </div>
+                      
+                    </div>
+                 </div>
+                
+
+    <footer>
+          <p>
+            All Rights Reserved &copy;<Strong id="year">2023</Strong>
+          </p>
+    </footer>
+
+    <script>
+        let menu=document.getElementById("menu");
+        let menuBtn=document.querySelector(".menu-btn");
+        menuBtn.addEventListener("click",function(event){
+            menu.classList.toggle("responsive")
+        })
+
+    </script>
+</body>
+</html>
