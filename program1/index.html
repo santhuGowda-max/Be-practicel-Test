@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   
+    input[type="checkbox"] {
+      display: none;
+    }
+
+  
+    input[type="checkbox"] + label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      display: inline-block;
+      line-height: 20px;
+      margin-right: 10px;
+    }
+
+    input[type="checkbox"] + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #333;
+      background-color: #fff;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"]:checked + label:before {
+      background-color: #4CAF50; /* Change color when checked */
+      border-color: #4CAF50;
+    }
+
+
+    input[type="radio"] {
+      display: none;
+    }
+
+   
+    input[type="radio"] + label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
+      display: inline-block;
+      line-height: 20px;
+      margin-right: 10px;
+    }
+
+    input[type="radio"] + label:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #333;
+      background-color: #fff;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"]:checked + label:before {
+      background-color: #4CAF50; /* Change color when checked */
+      border-color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+ 
+  <input type="checkbox" id="checkbox1">
+  <label for="checkbox1">Option 1</label>
+
+  <input type="checkbox" id="checkbox2">
+  <label for="checkbox2">Option 2</label>
+
+  <input type="checkbox" id="checkbox3">
+  <label for="checkbox3">Option 3</label>
+  <br>
+  <br>
+  <hr>
+  <br>
+  <input type="radio" id="radio1" name="radioGroup">
+  <label for="radio1">Option 1</label>
+
+  <input type="radio" id="radio2" name="radioGroup">
+  <label for="radio2">Option 2</label>
+
+  <input type="radio" id="radio3" name="radioGroup">
+  <label for="radio3">Option 3</label>
+  
+</body>
+</html>

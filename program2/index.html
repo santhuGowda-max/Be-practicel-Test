@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: gold;
+        width: 100%;
+        height: 100vh;
+    }
+     .container{
+        position: relative;
+      
+       height: 100%;
+        
+     }
+     main{
+        text-align: center;
+     }
+     main h1{
+        color: red;
+        padding: 10px;
+        margin-top: 10px;
+     }
+     button{
+       padding: 10px;
+       font-size: large;
+       outline: none;
+       border-radius: 10px;
+       border: none;
+       background-color:gray;
+        color: green;
+        transition: all 2s;
+
+     }
+     button:hover{
+        background-color: green;
+        color:black;
+     }
+
+     .hide-contant{
+        border: 2px solid black;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color:black;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        display: none;
+        transition: all 1s;
+        animation-name: animation;
+        animation-duration: 2s;
+       
+     }
+       .hide-contant h1{
+        color: blue;
+        margin-bottom: 10px;
+        font-size: 33px;
+       } 
+       .hide-contant p{
+        line-height: 22px;
+        font-size: 20px;
+        padding: 10px;
+       }
+
+       .hide-contant .important{
+        color: red;
+        font-size: 18px;
+        margin-bottom: 5px;
+
+       }
+       .hide-contant button{
+        width: 90px;
+       }
+       
+     
+</style>
+<body>
+  <div class="container">
+       <main>
+        <h1>Click to Below Button to open dialog box</h1>
+        <button id="show"> Open Dialog</button>
+       </main>
+     
+       <div class="hide-contant">
+                <h1>Welcome to Be practical </h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi iste sit nostrum quasi. Assumenda, in saepe! Asperiores aspernatur deleniti laboriosam blanditiis. Perferendis possimus atque nobis error est sint eum architecto.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa facilis cum recusandae? Repellendus facilis sint mollitia impedit optio non nemo unde quibusdam commodi, vel maxime accusamus cumque ipsam laborum voluptate?
+                </p>
+                <p class="important">
+                    if you want exit the dialog box, please click Hide button
+                </p>
+                <button id="hide">Hide</button>
+      
+    </div>
+        <script>
+            let show=document.getElementById("show");
+            let hide =document.getElementById("hide");
+            let content=document.getElementsByClassName("hide-contant");
+
+            show.addEventListener("click", function(){
+              content[0].style.display="block";
+            })
+            hide.addEventListener("click", function(){
+              content[0].style.display="none";
+            })
+        </script>
+</body>
+</html>
