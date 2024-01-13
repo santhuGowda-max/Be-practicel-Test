@@ -1,0 +1,83 @@
+package letsUpgrade;
+import java.util.Scanner;
+import java.util.*;
+
+public class maximunOfThreeNumber {
+
+	public static void main(String[] args) {
+		String str="wel";
+		System.out.println(reverse(str,str.length()-1));
+		System.out.println(palindrome("malayalal"));
+		System.out.println(repeatedChar("moree"));
+		int[] arr= {0,1,1,0,0,1,1,1,1,0,1,0,1,1,1,1,1,1};
+		System.out.println(consecutiveOnece(arr));
+		int[] a= {0,1,1,0,1,0,0,0,0,1,0,1};
+		program1(a);
+		System.out.println(Arrays.toString(a));
+	}
+	
+	public static String  reverse(String str, int count) {
+		if(count==-1) {
+			return "";
+		}
+		return str.charAt(count)+reverse(str,count-1);
+	}
+	
+	public static boolean palindrome(String str) {
+		  int start=0;
+		  int end=str.length()-1;
+		  while(end>start) {
+			   if(str.charAt(end)!=str.charAt(start)) {
+				   return false;
+			   }
+			   start++;
+			   end--;
+		  }
+		  return true;
+	}
+	
+	public static boolean repeatedChar(String str) {
+		  HashMap<Character,Integer> map=new HashMap<>();
+		  for(int i=0;i<str.length();i++) {
+			
+			  if(map.containsKey(str.charAt(i))) {
+				  return true;
+			  }
+			   map.put(str.charAt(i), i);
+			
+		  }
+		  return false;
+	}
+
+	 public static int consecutiveOnece(int[] arr) {
+		 int count=0;
+		 for(int i=0;i<arr.length;i++) {
+			 int size=0;
+			    	while(i<arr.length) {
+			        if(arr[i]==1) {
+			    		 i++;
+			    		 size++;
+			    	}else {
+			    		break;
+			    	}
+			    }
+			   
+			   count=Math.max(count, size);
+		 }
+		 return count;
+	 }
+	public static int[] program1(int[] arr) {
+		 int i=0;
+	        int j=0;
+	        while(i<arr.length){
+	            if(arr[i]==0){
+	                int temp=arr[i];
+	                arr[i]=arr[j];
+	                arr[j]=temp;
+	                j++;
+	            }
+	            i++;
+	        }
+	        return arr;
+	}
+}
